@@ -247,6 +247,18 @@ $ldap_type = $SETTINGS['ldap_type'] ?? '';
 
                                 <div class='row mb-2 tr-ldap'>
                                     <div class='col-5'>
+                                        <?php echo $lang->get('settings_ldap_group_object_filter'); ?>
+                                        <small id='passwordHelpBlock' class='form-text text-muted'>
+                                            <?php echo $lang->get('settings_ldap_group_object_filter_tip'); ?>
+                                        </small>
+                                    </div>
+                                    <div class='col-7'>
+                                        <input type='text' class='form-control form-control-sm setting-ldap' id='ldap_group_object_filter' value='<?php echo $SETTINGS['ldap_group_object_filter'] ?? ''; ?>'>
+                                    </div>
+                                </div>
+
+                                <div class='row mb-2 tr-ldap'>
+                                    <div class='col-5'>
                                         <?php echo $lang->get('settings_ldap_group_objectclasses_attibute'); ?>
                                         <small id='passwordHelpBlock' class='form-text text-muted'>
                                             <?php echo $lang->get('settings_ldap_group_objectclasses_attibute_tip'); ?>
