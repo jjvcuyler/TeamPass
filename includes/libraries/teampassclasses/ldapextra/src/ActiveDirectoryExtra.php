@@ -50,7 +50,8 @@ class ActiveDirectoryExtra extends BaseGroup
             ];
         }
         // prepare query
-        $query = $connection->query();
+        $query = $connection->query()
+            ->rawfilter($settings['ldap_group_object_filter']);
 
         // get all parameters to search
         foreach (static::$objectClasses as $objectClass) {
